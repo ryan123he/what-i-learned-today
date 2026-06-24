@@ -1,5 +1,5 @@
-﻿const CACHE="jnltxkx-v1";
-const URLS=["/what-i-learned-today/","index.html","manifest.json","icon.svg"];
-self.addEventListener("install",function(e){e.waitUntil(caches.open(CACHE).then(function(c){return c.addAll(URLS)}))});
-self.addEventListener("activate",function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==CACHE}).map(function(k){return caches.delete(k)}))}))});
+﻿const C="jnltxkx-v1";
+const U=["index.html","manifest.json","icon.svg"];
+self.addEventListener("install",function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(U)}))});
+self.addEventListener("activate",function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}))});
 self.addEventListener("fetch",function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});
