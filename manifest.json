@@ -1,8 +1,8 @@
-﻿{
+{
   "name": "今天学到了什么",
   "short_name": "每日新知",
   "description": "用费曼学习法每天记录一个知识点。把好像懂了变成真的会了。",
-  "start_url": ".",
+  "start_url": "/what-i-learned-today/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f6f1eb",
